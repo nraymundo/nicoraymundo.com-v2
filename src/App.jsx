@@ -1,6 +1,7 @@
 import './App.css'
-import { Box } from "@chakra-ui/react"
+import { Box, Divider } from "@chakra-ui/react"
 import Header from './sections/Header'
+import Footer from './sections/Footer'
 import { Outlet } from "react-router-dom";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <Box bg='black' width='100%' pt={5}>
       <Header />
       <Outlet />
+      <Footer />
     </Box>
   )
 }

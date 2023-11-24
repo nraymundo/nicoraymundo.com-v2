@@ -4,13 +4,13 @@ import App from './App.jsx'
 import './index.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from './theme.js'
-import '@fontsource-variable/inter';
+// import '@fontsource-variable/inter';
 import '@fontsource-variable/texturina';
-import '@fontsource-variable/libre-franklin';
+// import '@fontsource-variable/libre-franklin';
 import '@fontsource/ubuntu/300.css';
 import '@fontsource/ubuntu/500.css';
 import '@fontsource/ubuntu/700.css';
-import Footer from './sections/Footer'
+import Projects from './sections/Projects'
 import Home from './sections/Home'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "projects",
-        element: <Footer />,
+        element: <Projects />,
       },
     ],
   },

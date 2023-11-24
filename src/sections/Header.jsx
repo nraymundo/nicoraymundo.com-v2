@@ -7,21 +7,13 @@ import { Link as ChakraLink } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import Marquee from "react-fast-marquee";
 import { MdCopyright } from "react-icons/md";
+import Resume from "../assets/resume.pdf";
 
 export default function Header() {
   const [currentForm, setCurrentForm] = useState('Home');
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <Box w='100%' color='white' display='flex' justifyContent='center' flexDirection='row' pr={5}>
-      {/* <Box pl={1} pt={1}>
-        <Box boxSize='100px'>
-          <motion.img
-            whileHover={{ scale: 1.1 }}
-            src={icon}
-            alt='icon'
-          />
-        </Box>
-      </Box> */}
       <Box w='450px'>
         <Menu matchWidth={true} onOpen={() => setIsNavOpen(true)} onClose={() => setIsNavOpen(false)}>
           <MenuButton
@@ -62,7 +54,7 @@ export default function Header() {
               fontSize='3xl' textStyle='secondary'  backgroundColor='#0A0A0A'
               color='white'
             >
-              <ChakraLink as={ReactRouterLink} to='/' width='100%' _hover={{ textDecoration: "none", color: 'grey' }}>
+              <ChakraLink as={ReactRouterLink} to='/' width='100%' _hover={{ textDecoration: "none", color: '#494949' }}>
                 Home
               </ChakraLink>
             </MenuItem>
@@ -71,12 +63,20 @@ export default function Header() {
               textAlign='center' fontSize='3xl' textStyle='secondary'
               backgroundColor='#0A0A0A' color='white'
             >
-              <ChakraLink as={ReactRouterLink} to='/projects' width='100%' _hover={{ textDecoration: "none", color: 'grey' }}>
+              <ChakraLink as={ReactRouterLink} to='/projects' width='100%' _hover={{ textDecoration: "none", color: '#494949' }}>
                 Projects
               </ChakraLink>
             </MenuItem>
             <MenuItem
-              as="a" onClick={() => setCurrentForm('Projects')}
+              as="a" textAlign='center' fontSize='3xl' textStyle='secondary'
+              backgroundColor='#0A0A0A' color='white'
+            >
+              <ChakraLink as={ReactRouterLink} to={Resume} target="newTab" width='100%' _hover={{ textDecoration: "none", color: '#494949' }}>
+                Resumé
+              </ChakraLink>
+            </MenuItem>
+            <MenuItem
+              as="a" onClick={() => setCurrentForm('Photo')}
               textAlign='center' fontSize='3xl' textStyle='secondary'
               backgroundColor='#0A0A0A' color='white' isDisabled={true}
             >

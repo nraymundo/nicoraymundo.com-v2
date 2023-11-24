@@ -26,7 +26,7 @@ export default function About() {
       <Box fontSize='6xl' textStyle='primary' _selection={{ color: '#9DAE9E' }} textAlign='left'>
         {introText}
         {' '}
-        <Link href='#' _hover={{ textDecoration:'none', color: '#016FD0' }} textStyle='secondary' fontWeight={700}>
+        <Link href='#' _hover={{ textDecoration:'none', color: '#016FD0' }} _selection={{ color: '#016FD0' }} textStyle='secondary' fontWeight={700}>
           American Express.
         </Link>
       </Box>
@@ -40,14 +40,14 @@ export default function About() {
         >
           <GridItem colSpan={4}>
             <Box textAlign={'left'}>
-              <Text fontSize='md' fontWeight={500}>About</Text>
+              <Text fontSize='md' fontWeight={500} _selection={{ color: '#9DAE9E' }}>About</Text>
             </Box>
           </GridItem>
           <GridItem colSpan={5}>
             <Box textAlign={'left'}>
-              <Text fontSize='md'>{aboutText}</Text>
+              <Text fontSize='md' _selection={{ color: '#9DAE9E' }}>{aboutText}</Text>
               <br />
-              <Text fontSize='md'>{aboutText2}</Text>
+              <Text fontSize='md' _selection={{ color: '#9DAE9E' }}>{aboutText2}</Text>
             </Box>
           </GridItem>
         </Grid>
@@ -62,12 +62,12 @@ export default function About() {
         >
           <GridItem rowSpan={2} colSpan={2}>
             <Box textAlign={'left'}>
-              <Text fontSize='md' fontWeight={700}>Curiculum Vitae</Text>
+              <Text fontSize='md' fontWeight={700} _selection={{ color: '#9DAE9E' }}>Curiculum Vitae</Text>
             </Box>
           </GridItem>
           <GridItem colSpan={2}>
             <Box textAlign={'left'} fontWeight={700}>
-              <Text fontSize='md'>American Express</Text>
+              <Text fontSize='md' _selection={{ color: '#9DAE9E' }}>American Express</Text>
             </Box>
           </GridItem>
           <GridItem colSpan={8}>
@@ -78,21 +78,21 @@ export default function About() {
             >
               <GridItem rowSpan={2} colSpan={6}>
                 <Box textAlign={'left'}>
-                  <Text fontSize='md'>Engineer II</Text>
-                  <Text fontSize='md' mt={5}>Engineer III</Text>
+                  <Text fontSize='md' _selection={{ color: '#9DAE9E' }}>Engineer II</Text>
+                  <Text fontSize='md' mt={5} _selection={{ color: '#9DAE9E' }}>Engineer III</Text>
                 </Box>
               </GridItem>
               <GridItem rowSpan={2} colSpan={2}>
                 <Box textAlign={'left'}>
-                  <Text fontSize='md'>2023 - Present</Text>
-                  <Text fontSize='md' mt={5}>2021 - 2023</Text>
+                  <Text fontSize='md' _selection={{ color: '#9DAE9E' }}>2023 - Present</Text>
+                  <Text fontSize='md' mt={5} _selection={{ color: '#9DAE9E' }}>2021 - 2023</Text>
                 </Box>
               </GridItem>
             </Grid>
           </GridItem>
           <GridItem colSpan={2}>
             <Box textAlign={'left'} fontWeight={600}>
-              <Text fontSize='md'>Loyola Marymount University</Text>
+              <Text fontSize='md' _selection={{ color: '#9DAE9E' }}>Loyola Marymount University</Text>
             </Box>
           </GridItem>
           <GridItem colSpan={8}>
@@ -103,12 +103,12 @@ export default function About() {
             >
               <GridItem rowSpan={2} colSpan={6}>
                 <Box textAlign={'left'}>
-                  <Text fontSize='md'>Bachelor of Arts, Computer Science</Text>
+                  <Text fontSize='md' _selection={{ color: '#9DAE9E' }}>Bachelor of Arts, Computer Science</Text>
                 </Box>
               </GridItem>
               <GridItem rowSpan={2} colSpan={2}>
                 <Box textAlign={'left'}>
-                  <Text fontSize='md'>2017 - 2021</Text>
+                  <Text fontSize='md' _selection={{ color: '#9DAE9E' }}>2017 - 2021</Text>
                 </Box>
               </GridItem>
             </Grid>

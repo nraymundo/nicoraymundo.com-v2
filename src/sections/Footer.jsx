@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Text, Grid, GridItem, Icon, Flex } from "@chakra-ui/react"
+import { Box, Text, Grid, GridItem, Icon, Flex, Divider } from "@chakra-ui/react"
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Marquee from "react-fast-marquee";
 import Header from './Header'
@@ -173,7 +173,8 @@ export default function Footer() {
   // }, [token]);
 
   return (
-    <Box w='100%' mt={5} h='150px'>
+    <Box w='100%' mt={5} h='150px' pl={10} pr={10}>
+      <Divider borderColor={'#494949'} borderWidth={0.8} mt={5}/>
       {/* <SimpleGrid columns={{sm: 2, md: 3, lg: 4, xl: 5}}>
         <Flex as="a" href='https://instagram.com' target='_blank' color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }} width=''>
           <Text _hover={{ textDecoration: 'none', color: '#858682' }}>
@@ -244,8 +245,8 @@ export default function Footer() {
           mt={5}
         >
           <GridItem colSpan={2}>
-            <Flex as="a" href='https://instagram.com' target='_blank' color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }} width=''>
-              <Text _hover={{ textDecoration: 'none', color: '#858682' }}>
+            <Flex as="a" href='https://github.com/nraymundo' target='_blank' rel="noopener noreferrer" color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }} width=''>
+              <Text _hover={{ textDecoration: 'none', color: '#858682' }} _selection={{ color: '#9DAE9E' }}>
                 GitHub
               </Text>
               <motion.button
@@ -258,8 +259,8 @@ export default function Footer() {
             </Flex>
           </GridItem>
           <GridItem colSpan={2}>
-            <Flex as="a" href='https://instagram.com' target='_blank' color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }}>
-              <Text _hover={{ textDecoration: 'none', color: '#858682' }}>
+            <Flex as="a" href='https://www.linkedin.com/in/nicolasraymundo/' target='_blank' rel="noopener noreferrer" color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }}>
+              <Text _hover={{ textDecoration: 'none', color: '#858682' }} _selection={{ color: '#9DAE9E' }}>
                 LinkedIn
               </Text>
               <motion.button
@@ -272,8 +273,8 @@ export default function Footer() {
             </Flex>
           </GridItem>
           <GridItem colSpan={2}>
-            <Flex as="a" href='https://instagram.com' target='_blank' color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }}>
-              <Text _hover={{ textDecoration: 'none', color: '#858682' }}>
+            <Flex as="a" href='https://www.instagram.com/nicoraymundo/' target='_blank' rel="noopener noreferrer" color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }}>
+              <Text _hover={{ textDecoration: 'none', color: '#858682' }} _selection={{ color: '#9DAE9E' }}>
                 Instagram
               </Text>
               <motion.button
@@ -286,8 +287,8 @@ export default function Footer() {
             </Flex>
           </GridItem>
           <GridItem colSpan={2}>
-            <Flex as="a" href='https://instagram.com' target='_blank' color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }}>
-              <Text _hover={{ textDecoration: 'none', color: '#858682' }}>
+            <Flex as="a" href='https://twitter.com/nicoraymundo2' target='_blank' rel="noopener noreferrer" color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }}>
+              <Text _hover={{ textDecoration: 'none', color: '#858682' }} _selection={{ color: '#9DAE9E' }}>
                 Twitter
               </Text>
               <motion.button
@@ -300,8 +301,8 @@ export default function Footer() {
             </Flex>
           </GridItem>
           <GridItem colSpan={4}>
-            <Flex as="a" href='https://instagram.com' target='_blank' color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }}>
-              <Text _hover={{ textDecoration: 'none', color: '#858682' }}>
+            <Flex as="a" href='mailto:nicoraymundo2@gmail.com' target='_blank' rel="noopener noreferrer" color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }}>
+              <Text _hover={{ textDecoration: 'none', color: '#858682' }} _selection={{ color: '#9DAE9E' }}>
                 nicoraymundo2@gmail.com
               </Text>
               <motion.button

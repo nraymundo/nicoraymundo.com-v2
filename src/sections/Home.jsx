@@ -8,8 +8,6 @@ export default function Home() {
   return (
     <Box bg='black' width='100%' pt={5} pl={10} pr={10}>
       <About />
-      <Divider borderColor={'#494949'} borderWidth={0.8} mt={5}/>
-      <Footer />
     </Box>
   )
 }
