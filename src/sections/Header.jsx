@@ -24,7 +24,7 @@ export default function Header() {
             _focus={{ textDecoration: 'none', backgroundColor: '#0A0A0A' }}
             height='48px'
           >
-            <Flex align='center' justify='space-between' fontSize='sm'>
+            <Flex align='center' justify='space-between' fontSize='14'>
               <Image
                 boxSize='40px'
                 objectFit='cover'
