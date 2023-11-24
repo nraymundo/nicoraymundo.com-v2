@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Box, Text, Icon, Menu, MenuButton, Button, MenuList, MenuItem, Image, Flex } from "@chakra-ui/react"
-import { FaMapPin } from "react-icons/fa";
 import icon from'../assets/icon.png';
 import { motion } from "framer-motion"
 import { Link as ReactRouterLink } from 'react-router-dom'
 import { Link as ChakraLink } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
+import Marquee from "react-fast-marquee";
+import { MdCopyright } from "react-icons/md";
 
 export default function Header() {
   const [currentForm, setCurrentForm] = useState('Home');
@@ -55,24 +56,57 @@ export default function Header() {
               )}
             </Flex>
           </MenuButton>
-          <MenuList color='black' backgroundColor='#0A0A0A' border='0px' boxShadow='0px 0px 8px -4px white' borderRadius='5px'>
+          <MenuList color='black' backgroundColor='#0A0A0A' border='0px' boxShadow='0px 0px 8px -4px white' borderRadius='5px' p={0}>
             <MenuItem
-              as="a" onClick={() => setCurrentForm('About')} textAlign='center'
+              as="a" onClick={() => setCurrentForm('Home')} textAlign='center'
               fontSize='3xl' textStyle='secondary'  backgroundColor='#0A0A0A'
               color='white'
             >
-              <ChakraLink as={ReactRouterLink} to='/about' width='100%' _hover={{ textDecoration: "none", color: 'grey' }}>
-                About
+              <ChakraLink as={ReactRouterLink} to='/' width='100%' _hover={{ textDecoration: "none", color: 'grey' }}>
+                Home
               </ChakraLink>
             </MenuItem>
             <MenuItem
-              as="a" onClick={() => setCurrentForm('Footer')}
+              as="a" onClick={() => setCurrentForm('Projects')}
               textAlign='center' fontSize='3xl' textStyle='secondary'
               backgroundColor='#0A0A0A' color='white'
             >
-              <ChakraLink as={ReactRouterLink} to='/footer' width='100%' _hover={{ textDecoration: "none", color: 'grey' }}>
-                Show Footer
+              <ChakraLink as={ReactRouterLink} to='/projects' width='100%' _hover={{ textDecoration: "none", color: 'grey' }}>
+                Projects
               </ChakraLink>
+            </MenuItem>
+            <MenuItem
+              as="a" onClick={() => setCurrentForm('Projects')}
+              textAlign='center' fontSize='3xl' textStyle='secondary'
+              backgroundColor='#0A0A0A' color='white' isDisabled={true}
+            >
+              <Text textAlign='center' width='100%'>
+                Photo
+                <sup style={{ fontSize: '20px' }}>(WIP)</sup>
+              </Text>
+            </MenuItem>
+            <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' pl={0} pr={0}>
+              <Text
+                color='#797979' fontSize='15px' width='30%' borderTop='1px solid #494949' textAlign='center'
+                borderBottom='1px solid #494949' borderRight='1px solid #494949' pt={2} pb={2}
+              >
+                Now Playing
+              </Text>
+              <Marquee
+                style={{
+                  borderTop: '1px solid #494949',
+                  borderBottom: '1px solid #494949',
+                }}
+                speed={20}
+              >
+                <Text color='white' fontSize='15px' pt={2} pb={2}>Dermot (see yourself in my eyes)</Text>
+              </Marquee>
+            </MenuItem>
+            <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' p={0} pl={2}>
+              <Flex justify='center' align='center' color='#797979' pb={1}>
+                <Icon as={MdCopyright} fontSize='11px' />
+                <Text color='#797979' fontSize='12px' pl={1}>2023 NICO RAYMUNDO</Text>
+              </Flex>
             </MenuItem>
           </MenuList>
         </Menu>

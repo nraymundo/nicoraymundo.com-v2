@@ -7,9 +7,12 @@ import theme from './theme.js'
 import '@fontsource-variable/inter';
 import '@fontsource-variable/texturina';
 import '@fontsource-variable/libre-franklin';
+import '@fontsource/ubuntu/300.css';
+import '@fontsource/ubuntu/500.css';
+import '@fontsource/ubuntu/700.css';
 import Footer from './sections/Footer'
 import Home from './sections/Home'
-import { Route, Routes, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -17,11 +20,11 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "about",
+        path: "/",
         element: <Home />,
       },
       {
-        path: "footer",
+        path: "projects",
         element: <Footer />,
       },
     ],
@@ -31,13 +34,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      {/* <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="projects" element={<About />} />
-        </Routes>
-      </BrowserRouter> */}
-      {/* <App /> */}
       <RouterProvider router={router} />
     </ChakraProvider>
   </React.StrictMode>,

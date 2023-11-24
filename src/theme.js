@@ -8,7 +8,7 @@ const theme = extendTheme({
       fontFamily: `'Texturina Variable', sans-serif`,
     },
     secondary: {
-      fontFamily: `'Inter Variable', sans-serif`,
+      fontFamily: `'Ubuntu', sans-serif`,
       fontWeight: 500,
     },
   },
