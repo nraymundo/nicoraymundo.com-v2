@@ -11,7 +11,7 @@ import '@fontsource/ubuntu/300.css';
 import '@fontsource/ubuntu/500.css';
 import '@fontsource/ubuntu/700.css';
 import Projects from './sections/Projects'
-import Home from './sections/Home'
+import About from './sections/About'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <About />,
       },
       {
         path: "projects",
