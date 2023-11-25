@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Box, Text, Icon, Menu, MenuButton, Button, MenuList, MenuItem, Image, Flex, Link as ChakraLink } from "@chakra-ui/react"
+import { useEffect, useState } from "react";
+import { Box, Text, Icon, Menu, MenuButton, Button, MenuList, MenuItem, Image, Flex, Link as ChakraLink, LinkBox, LinkOverlay, Link } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { Link as ReactRouterLink } from 'react-router-dom'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
@@ -8,10 +8,9 @@ import { MdCopyright } from "react-icons/md";
 import { FaSpotify } from "react-icons/fa";
 import icon from'../assets/icon.png';
 import Resume from "../assets/resume.pdf";
-
+import getNowPlayingItem from "../SpotifyAPI";
 
 function NavigationItem({ name, url, setCurrentForm, isDisabled }) {
-  console.log(name, isDisabled);
   return (
     <MenuItem
       as="a" onClick={() => setCurrentForm(name)} textAlign='center'
@@ -25,36 +24,50 @@ function NavigationItem({ name, url, setCurrentForm, isDisabled }) {
   )
 }
 
-function SpotifyNowPlaying() {
+function SpotifyNowPlaying({currentTrack}) {
   return (
-    <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' pl={0} pr={0}>
-      <Text
-        color='#797979' fontSize='15px' width='35%' borderTop='1px solid #494949' textAlign='center'
+    <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' pl={0} pr={0} width='100%'>
+      <Link
+        color='#797979' fontSize='15px' width='30%' borderTop='1px solid #494949' textAlign='center'
         borderBottom='1px solid #494949' borderRight='1px solid #494949' pt={2} pb={2}
         display='flex' justifyContent='center' alignItems='center' _hover={{ color: '#1DB954' }}
+        href={currentTrack.url} target='_blank' rel="noopener noreferrer"
       >
         Now Playing
         <Icon as={FaSpotify} fontSize='14px' pl={1} />
-      </Text>
-      <Marquee
-        style={{
-          borderTop: '1px solid #494949',
-          borderBottom: '1px solid #494949',
-        }}
-        speed={20}
-      >
-        <Text color='white' fontSize='15px' pt={2} pb={2}>Dermot (see yourself in my eyes)</Text>
-      </Marquee>
+      </Link>
+      <LinkBox w='70%'>
+        <LinkOverlay href={currentTrack.url} target='_blank' rel="noopener noreferrer">
+          <Marquee
+            style={{
+              borderTop: '1px solid #494949',
+              borderBottom: '1px solid #494949',
+            }}
+            speed={20}
+          >
+            <Text color='white' fontSize='15px' pt={2} pb={2}>{currentTrack.title}</Text>
+          </Marquee>
+        </LinkOverlay>
+      </LinkBox>
     </MenuItem>
   )
 }
 
 export default function NavigationMenu({}) {
   const [currentForm, setCurrentForm] = useState('Home');
-  console.log('currentForm', currentForm)
+  const [token, setToken] = useState("")
   const [isNavOpen, setIsNavOpen] = useState(false);
   const NavigationPageLabel = `/${currentForm.toUpperCase()}`;
+  const [result, setResult] = useState({});
   
+  useEffect(() => {
+      Promise.all([
+          getNowPlayingItem(),
+      ]).then((results) => {
+          setResult(results[0]);
+      });
+  }, []);
+
   return (
     <Box w='450px'>
       <Menu matchWidth={true} onOpen={() => setIsNavOpen(true)} onClose={() => setIsNavOpen(false)}>
@@ -109,7 +122,7 @@ export default function NavigationMenu({}) {
               Photo<sup style={{ fontSize: '20px' }}>(WIP)</sup>
             </Text>
           </MenuItem>
-          <SpotifyNowPlaying />
+          <SpotifyNowPlaying currentTrack={{ title: result.title, url: result.url }} />
           <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' p={0} pl={2}>
             <Flex justify='center' align='center' color='#797979' pb={1}>
               <Icon as={MdCopyright} fontSize='11px' />

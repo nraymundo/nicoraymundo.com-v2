@@ -59,8 +59,9 @@ export default function Projects() {
           <Flex direction='row'>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>JavaScript</Text>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>ReactJS</Text>
+            <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Vite</Text>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Chakra UI</Text>
-            <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Framer</Text>
+            <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Framer Motion</Text>
           </Flex>
         )}
       />

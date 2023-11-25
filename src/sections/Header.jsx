@@ -14,7 +14,7 @@ export default function Header() {
   const [currentForm, setCurrentForm] = useState('Home');
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <Box w='100%' color='white' display='flex' justifyContent='center' flexDirection='row' pr={5}>
+    <Box w='100%' color='white' display='flex' justifyContent='center' flexDirection='row'>
       <NavigationMenu />
     </Box>
   )

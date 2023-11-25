@@ -1,4 +1,4 @@
-import { Box, Divider, Text, Grid, GridItem } from "@chakra-ui/react"
+import { Box, Text, Grid, GridItem } from "@chakra-ui/react"
 import AnimatedText from "../components/AnimatedText"
 import Line from "../components/Line"
 

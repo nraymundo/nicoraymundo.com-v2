@@ -4,15 +4,14 @@ import App from './App.jsx'
 import './index.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from './theme.js'
-// import '@fontsource-variable/inter';
 import '@fontsource-variable/texturina';
-// import '@fontsource-variable/libre-franklin';
 import '@fontsource/ubuntu/300.css';
 import '@fontsource/ubuntu/500.css';
 import '@fontsource/ubuntu/700.css';
 import Projects from './sections/Projects'
 import About from './sections/About'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+// import 'dotenv/config'
 
 const router = createBrowserRouter([
   {

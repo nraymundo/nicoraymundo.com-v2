@@ -30,7 +30,7 @@ export default function AnimatedText({ delay, text }) {
     animate(count, 132, {
       type: "tween",
       delay: delay,
-      duration: 3,
+      duration: 2.5,
       ease: "easeIn",
       onUpdate() {
         textIndex.set(0);
