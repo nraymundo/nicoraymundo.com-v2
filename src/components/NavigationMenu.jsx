@@ -8,7 +8,7 @@ import { MdCopyright } from "react-icons/md";
 import { FaSpotify } from "react-icons/fa";
 import icon from'../assets/icon.png';
 import Resume from "../assets/resume.pdf";
-import getNowPlayingItem from "../SpotifyAPI";
+import getRecentlyPlayedInfo from "../SpotifyAPI";
 import { useLocation } from "react-router-dom";
 
 function NavigationItem({ name, url, setCurrentForm, isDisabled }) {
@@ -25,7 +25,7 @@ function NavigationItem({ name, url, setCurrentForm, isDisabled }) {
   )
 }
 
-function SpotifyNowPlaying({currentTrack}) {
+function SpotifyRecentlyPlayed({currentTrack}) {
   return (
     <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' pl={0} pr={0} width='100%'>
       <Link
@@ -62,11 +62,11 @@ export default function NavigationMenu({}) {
   const [result, setResult] = useState({});
   
   useEffect(() => {
-      Promise.all([
-          getNowPlayingItem(),
-      ]).then((results) => {
-          setResult(results[0]);
-      });
+    Promise.all([
+      getRecentlyPlayedInfo(),
+    ]).then((results) => {
+      setResult(results[0]);
+    });
   }, []);
 
   return (
@@ -123,7 +123,7 @@ export default function NavigationMenu({}) {
               Photo<sup style={{ fontSize: '20px' }}>(WIP)</sup>
             </Text>
           </MenuItem>
-          <SpotifyNowPlaying currentTrack={{ title: result.title, artist: result.artist, url: result.url }} />
+          <SpotifyRecentlyPlayed currentTrack={{ title: result.title, artist: result.artist, url: result.url }} />
           <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' p={0} pl={2}>
             <Flex justify='center' align='center' color='#797979' pb={1}>
               <Icon as={MdCopyright} fontSize='11px' />
