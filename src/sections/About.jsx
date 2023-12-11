@@ -39,7 +39,7 @@ function CVGridInfo({positions, dates}) {
 
 export default function About() {
   return (
-    <Box w='100%' color='#DCE0D9' mt={20} bg='black' pt={5} pl={[5, 10]} pr={[5, 10]}>
+    <Box w='100%' color='#DCE0D9' mt={10} bg='black' pt={5} pl={[5, 10]} pr={[5, 10]}>
       <Box fontSize={['3xl', '6xl']} textStyle='primary' _selection={{ color: '#9DAE9E' }} textAlign='left'>
         {introText}
         {' '}
