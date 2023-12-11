@@ -100,7 +100,7 @@ export default function NavigationMenu({}) {
               boxSize='40px'
               objectFit='cover'
               src={icon}
-              alt='Dan Abramov'
+              alt='logo'
               _hover={{ boxSize: '60px'}}
             />
             {NavigationPageLabel}
