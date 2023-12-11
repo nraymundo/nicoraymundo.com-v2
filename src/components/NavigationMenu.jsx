@@ -1,15 +1,30 @@
 import { useEffect, useState } from "react";
-import { Box, Text, Icon, Menu, MenuButton, Button, MenuList, MenuItem, Image, Flex, Link as ChakraLink, LinkBox, LinkOverlay, Link } from "@chakra-ui/react"
+import {
+  Box,
+  Text,
+  Icon,
+  Menu,
+  MenuButton,
+  Button,
+  MenuList,
+  MenuItem,
+  Image,
+  Flex,
+  Link as ChakraLink,
+  LinkBox,
+  LinkOverlay,
+  Link
+} from "@chakra-ui/react"
 import { motion } from "framer-motion"
-import { Link as ReactRouterLink } from 'react-router-dom'
+import { Link as ReactRouterLink, useLocation } from 'react-router-dom'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import Marquee from "react-fast-marquee";
 import { MdCopyright } from "react-icons/md";
 import { FaSpotify } from "react-icons/fa";
 import icon from'../assets/icon.png';
-import Resume from "../assets/resume.pdf";
+import Resume from'../assets/resume.pdf';
+// import Resume from "../assets/resume.pdf";
 import getRecentlyPlayedInfo from "../SpotifyAPI";
-import { useLocation } from "react-router-dom";
 
 function NavigationItem({ name, url, setCurrentForm, isDisabled }) {
   return (

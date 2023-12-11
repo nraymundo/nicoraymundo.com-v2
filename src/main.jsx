@@ -11,7 +11,6 @@ import '@fontsource/ubuntu/700.css';
 import Projects from './sections/Projects'
 import About from './sections/About'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-// import 'dotenv/config'
 
 const router = createBrowserRouter([
   {
