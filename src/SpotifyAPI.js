@@ -2,7 +2,6 @@ import querystring from "querystring";
 import {Buffer} from 'buffer';
 
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
-const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played?limit=1`;
 const client_id = import.meta.env.VITE_REACT_APP_SPOTIFY_CLIENT_ID;
 const client_secret = import.meta.env.VITE_REACT_APP_SPOTIFY_CLIENT_SECRET;
@@ -24,7 +23,7 @@ const getAccessToken = async () => {
     return response.json();
 };
 
-export const getNowPlaying = async (client_id, client_secret, refresh_token) => {
+export const getRecentlyPlayed = async (client_id, client_secret, refresh_token) => {
   const { access_token } = await getAccessToken(
       client_id,
       client_secret,
@@ -37,13 +36,12 @@ export const getNowPlaying = async (client_id, client_secret, refresh_token) => 
   });
 };
 
-export default async function getNowPlayingItem() {
-  const response = await getNowPlaying(client_id, client_secret, refresh_token);
+export default async function getRecentlyPlayedInfo() {
+  const response = await getRecentlyPlayed(client_id, client_secret, refresh_token);
   if (response.status === 204 || response.status > 400) {
       return false;
   }
   const song = await response.json();
-  // console.log(song.items[0].track.artists);
   // const artistsArray = [];
   // song.items[0].track.artists.forEach(artist => {
   //   artistsArray.push(artist.name);
