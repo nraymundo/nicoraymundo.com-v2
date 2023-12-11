@@ -29,15 +29,15 @@ function SpotifyRecentlyPlayed({currentTrack}) {
   return (
     <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' pl={0} pr={0} width='100%'>
       <Link
-        color='#797979' fontSize='15px' width='30%' borderTop='1px solid #494949' textAlign='center'
+        color='#797979' fontSize='15px' w={['40%', '30%']} borderTop='1px solid #494949' textAlign='center'
         borderBottom='1px solid #494949' borderRight='1px solid #494949' pt={2} pb={2}
         display='flex' justifyContent='center' alignItems='center' _hover={{ color: '#1DB954' }}
         href={currentTrack.url} target='_blank' rel="noopener noreferrer"
       >
         Now Playing
-        <Icon as={FaSpotify} fontSize='14px' pl={1} />
+        <Icon as={FaSpotify} fontSize={[20, 14]} pl={1} />
       </Link>
-      <LinkBox w='70%'>
+      <LinkBox w={['60%', '70%']}>
         <LinkOverlay href={currentTrack.url} target='_blank' rel="noopener noreferrer">
           <Marquee
             style={{
