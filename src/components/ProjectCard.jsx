@@ -1,8 +1,8 @@
-import { Box, Flex, Text, IconButton } from "@chakra-ui/react"
+import { Box, Flex, Text, IconButton, Link } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { FaGithub } from "react-icons/fa";
 
-export default function ProjectCard({name, year, description, tech, image}) {
+export default function ProjectCard({name, year, description, tech, image, githubUrl}) {
   return (
     <Box w='90%' color='#DCE0D9'>
       <Flex justify='space-between' align='center' mt={2}>
@@ -27,15 +27,19 @@ export default function ProjectCard({name, year, description, tech, image}) {
             duration: 1,
           }}
         />
-        <IconButton
-          isRound={true}
-          aria-label='GitHub'
-          fontSize='xl'
-          size='sm'
-          icon={<FaGithub />}
-          _hover={{ color: '#494949' }}
-          colorScheme='black'
-        />
+        <Link
+          href={githubUrl} target='_blank' rel="noopener noreferrer"
+        >
+          <IconButton
+            isRound={true}
+            aria-label='GitHub'
+            fontSize='xl'
+            size='sm'
+            icon={<FaGithub />}
+            _hover={{ color: '#494949' }}
+            colorScheme='black'
+          />
+        </Link>
       </Flex>
     </Box>
   )

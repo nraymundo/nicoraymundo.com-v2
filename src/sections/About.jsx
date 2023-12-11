@@ -1,4 +1,4 @@
-import { Box, Text, Grid, GridItem } from "@chakra-ui/react"
+import { Box, Text, Grid, GridItem, Divider } from "@chakra-ui/react"
 import AnimatedText from "../components/AnimatedText"
 import Line from "../components/Line"
 
@@ -40,7 +40,7 @@ function CVGridInfo({positions, dates}) {
 
 export default function About() {
   return (
-    <Box w='100%' color='#DCE0D9' mt={5} bg='black' pt={5} pl={10} pr={10}>
+    <Box w='100%' color='#DCE0D9' mt={20} bg='black' pt={5} pl={10} pr={10}>
       <Box fontSize='6xl' textStyle='primary' _selection={{ color: '#9DAE9E' }} textAlign='left'>
         {/* {introText}
         {' '}
@@ -49,7 +49,7 @@ export default function About() {
         </Link> */}
         <AnimatedText delay={0} text={introText} />
       </Box>
-      <Line />
+      <Box h={0.8} mt={5} backgroundColor='#494949'/>
       <Box textStyle='secondary'>
         <Grid
           templateRows='repeat(2)'
@@ -71,7 +71,7 @@ export default function About() {
           </GridItem>
         </Grid>
       </Box>
-      <Line />
+      <Box h={0.8} mt={5} backgroundColor='#494949'/>
       <Box textStyle='secondary'>
         <Grid
           templateRows='repeat(2)'

@@ -1,11 +1,7 @@
-import { useState } from "react";
-import { Box, Flex, Text, Image, ButtonGroup, Button, SimpleGrid, Icon, IconButton } from "@chakra-ui/react"
+import { Flex, Text, Image, SimpleGrid } from "@chakra-ui/react"
 import TopTracksHome from "../assets/toptracks-home-screen.png"; 
 import TopTracksArtists from "../assets/toptracks-artists-screen.png"; 
 import TopTracksTracks from "../assets/toptracks-tracks-screen.png"; 
-import Pivot from "../assets/pivot.png"; 
-import { motion, useScroll } from "framer-motion"
-import { FaGithub } from "react-icons/fa";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
@@ -50,6 +46,7 @@ export default function Projects() {
             />
           </Flex>
         )}
+        githubUrl='https://github.com/nraymundo/spotify-test'
       />
       <ProjectCard
         name='Nicoraymundo.com'
@@ -59,11 +56,12 @@ export default function Projects() {
           <Flex direction='row'>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>JavaScript</Text>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>ReactJS</Text>
-            <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Vite</Text>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Chakra UI</Text>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Framer Motion</Text>
+            <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Vercel</Text>
           </Flex>
         )}
+        githubUrl='https://github.com/nraymundo/nicoraymundo.com-v2'
       />
       <ProjectCard
         name='Pivot'
@@ -76,6 +74,7 @@ export default function Projects() {
             <Text textStyle='secondary' fontSize='sm' whiteSpace='nowrap'>ReactJS</Text>
           </Flex>
         )}
+        githubUrl='https://github.com/wdibi/Pivot'
       />
       <ProjectCard
         name='NFA Simulator'
@@ -86,6 +85,7 @@ export default function Projects() {
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Python</Text>
           </Flex>
         )}
+        githubUrl='https://github.com/nraymundo/cmsi385'
       />
       <ProjectCard
         name='Next-Word Prediction Language Model'
@@ -97,6 +97,7 @@ export default function Projects() {
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>GPT-2</Text>
           </Flex>
         )}
+        githubUrl='https://github.com/lmu-mandy/project-jnw'
       />
     </SimpleGrid>
   )
