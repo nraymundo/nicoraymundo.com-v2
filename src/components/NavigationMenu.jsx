@@ -45,7 +45,7 @@ function SpotifyNowPlaying({currentTrack}) {
             }}
             speed={20}
           >
-            <Text color='white' fontSize='15px' pt={2} pb={2}>{currentTrack.title}</Text>
+            <Text color='white' fontSize='15px' pt={2} pb={2} mr={20}>{currentTrack.title} - {currentTrack.artist}</Text>
           </Marquee>
         </LinkOverlay>
       </LinkBox>
@@ -55,7 +55,6 @@ function SpotifyNowPlaying({currentTrack}) {
 
 export default function NavigationMenu({}) {
   const [currentForm, setCurrentForm] = useState('Home');
-  const [token, setToken] = useState("")
   const [isNavOpen, setIsNavOpen] = useState(false);
   const NavigationPageLabel = `/${currentForm.toUpperCase()}`;
   const [result, setResult] = useState({});
@@ -122,7 +121,7 @@ export default function NavigationMenu({}) {
               Photo<sup style={{ fontSize: '20px' }}>(WIP)</sup>
             </Text>
           </MenuItem>
-          <SpotifyNowPlaying currentTrack={{ title: result.title, url: result.url }} />
+          <SpotifyNowPlaying currentTrack={{ title: result.title, artist: result.artist, url: result.url }} />
           <MenuItem as="a" textStyle='secondary' backgroundColor='#0A0A0A' color='white' p={0} pl={2}>
             <Flex justify='center' align='center' color='#797979' pb={1}>
               <Icon as={MdCopyright} fontSize='11px' />

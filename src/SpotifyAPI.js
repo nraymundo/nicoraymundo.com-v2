@@ -43,9 +43,15 @@ export default async function getNowPlayingItem() {
       return false;
   }
   const song = await response.json();
-  console.log(song);
+  // console.log(song.items[0].track.artists);
+  // const artistsArray = [];
+  // song.items[0].track.artists.forEach(artist => {
+  //   artistsArray.push(artist.name);
+  // });
   const title = song.items[0].track.name;
+  // const artists = artistsArray.join(', ');
+  const artist = song.items[0].track.artists[0].name;
   const url = song.items[0].track.external_urls.spotify;
   
-  return { title, url };
+  return { title, artist, url };
 }
