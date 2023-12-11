@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function ContactLink({name, url}) {
   return (
-    <GridItem colSpan={2}>
+    <GridItem colSpan={[6, 2]}>
       <Flex as="a" href={url} target='_blank' rel="noopener noreferrer" color='#DCE0D9' textStyle='secondary' align='center' _hover={{ color: '#858682' }} width=''>
         <Text _hover={{ textDecoration: 'none', color: '#858682' }} _selection={{ color: '#9DAE9E' }}>
           {name}
