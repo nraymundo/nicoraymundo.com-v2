@@ -4,9 +4,9 @@ import { FaGithub } from "react-icons/fa";
 
 export default function ProjectCard({name, year, description, tech, image, githubUrl}) {
   return (
-    <Box w='90%' color='#DCE0D9'>
+    <Box w={['100%', '90%']} color='#DCE0D9'>
       <Flex justify='space-between' align='center' mt={2}>
-        <Text textStyle='secondary' fontSize='4xl' whiteSpace='nowrap' fontWeight={700}>{name}</Text>
+        <Text textStyle='secondary' fontSize={['xl', '4xl']} whiteSpace='nowrap' fontWeight={700}>{name}</Text>
         <motion.div
           initial={{ width: 0 }} whileInView={{ width: '100%' }}
           style={{ height: 0.8, backgroundColor: '#494949', marginLeft: 15, marginRight: 15 }}
@@ -14,10 +14,10 @@ export default function ProjectCard({name, year, description, tech, image, githu
             duration: 1,
           }}
         />
-        <Text textStyle='secondary' fontSize='4xl' fontWeight={700}>{year}</Text>
+        <Text textStyle='secondary' fontSize={['xl', '4xl']} fontWeight={700}>{year}</Text>
       </Flex>
       {image}
-      <Text textStyle='secondary' fontSize='lg' textAlign='left' fontWeight={300}>{description}</Text>
+      <Text textStyle='secondary' fontSize={['md', 'lg']} mt={2} textAlign='left' fontWeight={300}>{description}</Text>
       <Flex justify='space-between' align='center' mt={2}>
         {tech}
         <motion.div
