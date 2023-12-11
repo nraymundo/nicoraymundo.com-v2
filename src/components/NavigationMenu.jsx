@@ -9,6 +9,7 @@ import { FaSpotify } from "react-icons/fa";
 import icon from'../assets/icon.png';
 import Resume from "../assets/resume.pdf";
 import getNowPlayingItem from "../SpotifyAPI";
+import { useLocation } from "react-router-dom";
 
 function NavigationItem({ name, url, setCurrentForm, isDisabled }) {
   return (
@@ -54,7 +55,8 @@ function SpotifyNowPlaying({currentTrack}) {
 }
 
 export default function NavigationMenu({}) {
-  const [currentForm, setCurrentForm] = useState('Home');
+  const location = useLocation();
+  const [currentForm, setCurrentForm] = useState(location.pathname.split('/')[1]);
   const [isNavOpen, setIsNavOpen] = useState(false);
   const NavigationPageLabel = `/${currentForm.toUpperCase()}`;
   const [result, setResult] = useState({});

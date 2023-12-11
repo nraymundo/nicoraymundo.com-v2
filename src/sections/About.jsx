@@ -8,11 +8,11 @@ const aboutText2 = `Over the years I've developed multiple web and mobile-based 
 languages and technologies in the process. I thrive on the dynamic intersection of creativity and technology, and am fueled by a genuine enthusiasm
 for solving complex problems and a commitment to delivering elegant solutions.`
 
-function CVGridHeader({rows, text}) {
+function CVGridHeader({rows, text, isSectionHeader}) {
   return (
     <GridItem rowSpan={rows} colSpan={[12, 2]}>
       <Box textAlign={'left'}>
-        <Text fontSize='md' fontWeight={700} _selection={{ color: '#9DAE9E' }}>{text}</Text>
+        <Text fontSize='md' fontWeight={isSectionHeader ? 700 : 500} _selection={{ color: '#9DAE9E' }}>{text}</Text>
       </Box>
     </GridItem>
   )
@@ -58,7 +58,7 @@ export default function About() {
         >
           <GridItem colSpan={[12, 4]}>
             <Box textAlign={'left'}>
-              <Text fontSize='md' fontWeight={500} _selection={{ color: '#9DAE9E' }}>About</Text>
+              <Text fontSize='md' fontWeight={700} _selection={{ color: '#9DAE9E' }}>About</Text>
             </Box>
           </GridItem>
           <GridItem colSpan={[12, 5]}>
@@ -78,7 +78,7 @@ export default function About() {
           gap={5}
           mt={5}
         >
-          <CVGridHeader rows={[1, 2]} text='Curiculum Vitae' />
+          <CVGridHeader rows={[1, 2]} isSectionHeader={true} text='Curiculum Vitae' />
           <CVGridHeader rows={1} text='American Express' />
           <CVGridInfo
             positions={(

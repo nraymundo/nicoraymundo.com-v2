@@ -6,7 +6,7 @@ import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
   return (
-    <SimpleGrid w='100%' mt={20} pl={10} pr={10} columns={1} spacing={20} display='flex' flexDirection='column' alignItems='center' mb={20}>
+    <SimpleGrid w='100%' mt={20} pl={[5, 10]} pr={[5, 10]} columns={1} spacing={20} display='flex' flexDirection='column' alignItems='center' mb={20}>
       <ProjectCard
         name='Spotify Stats'
         year='2023'
@@ -21,7 +21,7 @@ export default function Projects() {
         image={(
           <Flex justify='center' backgroundColor='#E9E3DD' mt={2} mb={2}>
             <Image
-              boxSize='250px'
+              boxSize={[150, 250]}
               fit='cover'
               align='center top'
               src={TopTracksHome}
@@ -29,7 +29,7 @@ export default function Projects() {
               mt={2}
             />
             <Image
-              boxSize='250px'
+              boxSize={[150, 250]}
               fit='cover'
               align='center top'
               src={TopTracksArtists}
@@ -37,7 +37,7 @@ export default function Projects() {
               mt={2}
             />
             <Image
-              boxSize='250px'
+              boxSize={[150, 250]}
               fit='cover'
               align='center top'
               src={TopTracksTracks}
@@ -54,7 +54,6 @@ export default function Projects() {
         description='A personal portfolio/website built using ReactJS, Chakra UI, and Framer.'
         tech={(
           <Flex direction='row'>
-            <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>JavaScript</Text>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>ReactJS</Text>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Chakra UI</Text>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Framer Motion</Text>
@@ -88,7 +87,7 @@ export default function Projects() {
         githubUrl='https://github.com/nraymundo/cmsi385'
       />
       <ProjectCard
-        name='Next-Word Prediction Language Model'
+        name='Next-Word Prediction Model'
         year='2020'
         description='Uses natural language processing to develop a Feed-Forward Neural Network model that was tested on a pre-trained GPT-2 model on next word prediction.'
         tech={(
