@@ -1,7 +1,7 @@
 import { Box, Text, Grid, GridItem, Link} from "@chakra-ui/react"
 import AnimatedText from "../components/AnimatedText"
 
-const introText = "Nico Raymundo is a full-stack software engineer from the San Francisco Bay Area, currently in New York City and at"
+const introText = "Hi, I'm Nico. I'm a full-stack software engineer from the San Francisco Bay Area, currently in New York City and at"
 const aboutText = `I'm a software engineer with a love for crafting cutting-edge web applications. I approach my work with the goal of turning ideas
 into functional realities, and revel in the challenge of architecting robust and scalable web solutions.`
 const aboutText2 = `Over the years I've developed multiple web and mobile-based applications, gaining experience with various programming languages
@@ -39,13 +39,14 @@ function CVGridInfo({positions, dates}) {
 
 export default function About() {
   return (
-    <Box w='100%' color='#DCE0D9' mt={10} bg='black' pt={5} pl={[5, 10]} pr={[5, 10]}>
+    <Box w='100%' color='#DCE0D9' mt={[10, 20]} bg='black' pt={5} pl={[5, 10]} pr={[5, 10]}>
       <Box fontSize={['3xl', '6xl']} textStyle='primary' _selection={{ color: '#9DAE9E' }} textAlign='left'>
         {introText}
         {' '}
         <Link href='#' _hover={{ textDecoration:'none', color: '#016FD0' }} _selection={{ color: '#016FD0' }} textStyle='secondary' fontWeight={700}>
-          American Express.
+          American Express
         </Link>
+        .
         {/* <AnimatedText delay={0} text={introText} /> */}
       </Box>
       <Box h={0.8} mt={5} backgroundColor='#494949'/>
