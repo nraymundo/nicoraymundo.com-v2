@@ -7,6 +7,9 @@ into functional realities, and revel in the challenge of architecting robust and
 const aboutText2 = `Over the years I've developed multiple web and mobile-based applications, gaining experience with various programming languages
 and technologies in the process. I thrive on the dynamic intersection of creativity and technology, and am fueled by a genuine enthusiasm for solving
 complex problems and a commitment to delivering elegant solutions.`
+const aboutText3 = `I'm currently working on enhancing the client onboarding experience at American Express. My role involves designing and implementing
+innovative solutions to streamline the onboarding process, ensuring a seamless and efficient journey for our clients. Outside of work, I enjoy walking
+around New York City with my camera, running the Central Park loop, and playing basketball and soccer.`
 
 function CVGridHeader({rows, text, isSectionHeader}) {
   return (
@@ -39,7 +42,7 @@ function CVGridInfo({positions, dates}) {
 
 export default function About() {
   return (
-    <Box w='100%' color='#DCE0D9' mt={[10, 20]} bg='black' pt={5} pl={[5, 10]} pr={[5, 10]}>
+    <Box w='100%' color='#252627' mt={[10, 20]} bg='#edede9' pt={5} pl={[5, 10]} pr={[5, 10]}>
       <Box fontSize={['3xl', '6xl']} textStyle='primary' _selection={{ color: '#9DAE9E' }} textAlign='left'>
         {introText}
         {' '}
@@ -67,6 +70,8 @@ export default function About() {
               <Text fontSize='md' _selection={{ color: '#9DAE9E' }} fontWeight={300}>{aboutText}</Text>
               <br />
               <Text fontSize='md' _selection={{ color: '#9DAE9E' }} fontWeight={300}>{aboutText2}</Text>
+              <br />
+              <Text fontSize='md' _selection={{ color: '#9DAE9E' }} fontWeight={300}>{aboutText3}</Text>
             </Box>
           </GridItem>
         </Grid>
