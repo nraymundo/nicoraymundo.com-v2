@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function ProjectCard({name, year, description, tech, image, githubUrl}) {
   return (
-    <Box w={['100%', '90%']} color='#DCE0D9'>
+    <Box w={['100%', '90%']} color='#252627'>
       <Flex justify='space-between' align='center' mt={2}>
         <Text textStyle='secondary' fontSize={['xl', '4xl']} whiteSpace='nowrap' fontWeight={700}>{name}</Text>
         <motion.div
@@ -36,7 +36,7 @@ export default function ProjectCard({name, year, description, tech, image, githu
             fontSize='xl'
             size='sm'
             icon={<FaGithub />}
-            _hover={{ color: '#494949' }}
+            color="252627"
             colorScheme='black'
           />
         </Link>

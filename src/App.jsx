@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <Box bg='black' width='100%' pt={5}>
+    <Box bg='#edede9' width='100%' pt={5}>
       <Header />
       <Outlet />
       <Footer />
