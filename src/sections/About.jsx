@@ -4,12 +4,12 @@ import AnimatedText from "../components/AnimatedText"
 const introText = "Hi, I'm Nico. I'm a full-stack software engineer from the San Francisco Bay Area, currently in New York City and at"
 const aboutText = `I'm a software engineer with a love for crafting cutting-edge web applications. I approach my work with the goal of turning ideas
 into functional realities, and revel in the challenge of architecting robust and scalable web solutions.`
-const aboutText2 = `Over the years I've developed multiple web and mobile-based applications, gaining experience with various programming languages
-and technologies in the process. I thrive on the dynamic intersection of creativity and technology, and am fueled by a genuine enthusiasm for solving
+const aboutText2 = `With years of experience working with web and mobile-based applications, I've been able to learn about and utilize a range of diverse
+technologies and frameworks. I thrive on the dynamic intersection of creativity and technology, and am fueled by a genuine enthusiasm for solving
 complex problems and a commitment to delivering elegant solutions.`
-const aboutText3 = `I'm currently working on enhancing the client onboarding experience at American Express. My role involves designing and implementing
-innovative solutions to streamline the onboarding process, ensuring a seamless and efficient journey for our clients. Outside of work, I enjoy walking
-around New York City with my camera, running the Central Park loop, and playing basketball and soccer.`
+const aboutText3 = `I'm currently working on enhancing the client onboarding experience at American Express. My role involves collaborating with talented
+teams to design and implement innovative solutions to streamline the onboarding process, ensuring a seamless and efficient journey for our clients.
+Outside of work, I enjoy walking around New York City with my camera, running the Central Park loop, and playing basketball and soccer.`
 
 function CVGridHeader({rows, text, isSectionHeader}) {
   return (
