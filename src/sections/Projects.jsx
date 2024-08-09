@@ -65,7 +65,7 @@ export default function Projects() {
       <ProjectCard
         name='Pivot'
         year='2021'
-        description='Uses aspects of compilers and interpreters to create a custom programming language featuring a custom built compiler with semantic analysis, code generation, and code optimization. Also features an accompanying website.'
+        description='Uses aspects of compilers and interpreters to create a programming language featuring a custom built compiler with semantic analysis, code generation, and code optimization. Also features an accompanying website.'
         tech={(
           <Flex direction='row'>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>JavaScript</Text>
@@ -78,7 +78,7 @@ export default function Projects() {
       <ProjectCard
         name='NFA Simulator'
         year='2020'
-        description='Uses aspects of compilers and interpreters to create a custom programming language featuring a custom built compiler with semantic analysis, code generation, and code optimization. Also features an accompanying website.'
+        description='Implements fundamentals of theory of computation to simulate the construction and querying of nondeterministic finite automata.'
         tech={(
           <Flex direction='row'>
             <Text textStyle='secondary' fontSize='sm' mr={2} whiteSpace='nowrap'>Python</Text>
