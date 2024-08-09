@@ -84,7 +84,7 @@ export default function About() {
           gap={5}
           mt={5}
         >
-          <CVGridHeader rows={[1, 2]} isSectionHeader={true} text='Curiculum Vitae' />
+          <CVGridHeader rows={[1, 2]} isSectionHeader={true} text='Curriculum Vitae' />
           <CVGridHeader rows={1} text='American Express' />
           <CVGridInfo
             positions={(
